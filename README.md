@@ -1,6 +1,10 @@
 # Final2DProject
  Kenneth Cho,
- Aidan Wall
+ Aidan Wall 2317537
+ 
+ 
+ link to presentation:
+ https://docs.google.com/presentation/d/1vIc3iSzXuzOgcpUUzVzCuOjsWomncTyWGzkaBppNyJg/edit?usp=sharing
  
  
  Sources:
