@@ -1,3 +1,10 @@
+// #CPSC236-Final Project
+// Kenneth Cho, Aiden Wall
+// 2325383,2317537
+// kecho@chapman.edu
+// cpsc236-03
+// This is the CharacterController2D script
+// This is a pre existing script that can be copied from https://github.com/Brackeys/2D-Character-Controller
 
 using UnityEngine;
 using UnityEngine.Events;

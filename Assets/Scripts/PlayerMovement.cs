@@ -1,4 +1,11 @@
-﻿using System.Collections;
+// #CPSC236-Final Project
+// Kenneth Cho, Aiden Wall
+// 2325383,2317537
+// kecho@chapman.edu
+// cpsc236-03
+// This is the playerMovement script that controls the player
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -20,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed; //enables player to move horizontally
 
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
@@ -29,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
             jumpFlag = false;
         }
 
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump"))  //enables user to make the character jump by pressing the space bar
         {
             jump = true;
             AudioSource.PlayClipAtPoint(jumpClip, transform.position);
@@ -48,9 +55,9 @@ public class PlayerMovement : MonoBehaviour
             jumpFlag = true;
         }
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision) //deals with collisions with enemies and doors that lead to other scenes
     {
-        if (collision.gameObject.layer == 10)
+        if (collision.gameObject.layer == 10) 
         {
             AudioSource.PlayClipAtPoint(deadClip, transform.position);
             SceneManager.LoadScene("GameOver");

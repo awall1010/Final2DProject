@@ -1,4 +1,11 @@
-﻿using System.Collections;
+// #CPSC236-Final Project
+// Kenneth Cho, Aiden Wall
+// 2325383,2317537
+// kecho@chapman.edu
+// cpsc236-03
+// This is a VerticalEnemyController script that controls enemies that move vertically
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,7 +17,7 @@ public class VerticalEnemyController : MonoBehaviour
     private float floatingDir = 0.05f;
 
 
-    private void FixedUpdate()
+    private void FixedUpdate()//makes the enemy that has this script move up and down constantly
     {
         if (floatingTimer < floatingMax)
         {
