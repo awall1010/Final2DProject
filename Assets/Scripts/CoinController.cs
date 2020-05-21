@@ -29,7 +29,12 @@ public class CoinController : MonoBehaviour
         if(collision.gameObject.layer == 9)
         {
             AudioSource.PlayClipAtPoint(pickupClip, transform.position);
+            //PlayerMovement.totalScore += 5;
             Destroy(this.gameObject);
         }
+        //if (collision.gameObject.layer == 12)
+        //{
+
+        //}
     }
 }

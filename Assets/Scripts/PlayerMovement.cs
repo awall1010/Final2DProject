@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public int totalScore;
+    public int totalScore = 0;
     public CharacterController2D controller;
     public Animator animator;
     public AudioClip deadClip;
@@ -53,21 +53,28 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.layer == 10)
         {
             AudioSource.PlayClipAtPoint(deadClip, transform.position);
+            SceneManager.LoadScene("GameOver");
             Destroy(this.gameObject);
+            FindObjectOfType<GameControlScript>().EndGame();
+            //SceneManager.LoadScene(3);
         }
+
         if (collision.gameObject.layer == 13)
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene("level2");
         }
         if(collision.gameObject.layer == 14)
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene("level3");
         }
-        if (collision.gameObject.layer == 9)
+        if (collision.gameObject.layer == 15) //bring player to final scene
         {
-            GameObject.Destroy(this.gameObject);
-            GameControlScript.health -= 1;
-            //GameObject.Destroy(collision.gameObject);
+            SceneManager.LoadScene("Win");
+        }
+
+            if (collision.gameObject.layer == 12)
+        {
+            totalScore += 5;
         }
     }
 }
