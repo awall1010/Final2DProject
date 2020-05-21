@@ -1,5 +1,5 @@
 # Final2DProject
- Kenneth Cho
+ Kenneth Cho,
  Aidan Wall
  
  
