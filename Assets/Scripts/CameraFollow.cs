@@ -1,7 +1,8 @@
 // #CPSC236-Final Project
-// Kenneth Cho, Aiden Wall
+// Kenneth Cho, Aidan Wall
 // 2325383,2317537
 // kecho@chapman.edu
+// awall@chapman.edu
 // cpsc236-03
 // This is the CameraFollow script for this project
 
